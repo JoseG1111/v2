@@ -158,7 +158,7 @@ app.delete('/cities/:id', async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: 'Error eliminando la ciudad' });
     }
-});
+cd});
 
 // Endpoint para servir la interfaz de administración
 app.get('/admin', (req, res) => {
@@ -169,3 +169,16 @@ app.get('/admin', (req, res) => {
 app.listen(port, () => {
     console.log(`🚀 Servidor corriendo en: http://localhost:${port}`);
 });
+
+
+// Eliminar todas las ciudades (por _id)
+// DELETE - Eliminar todas las ciudades
+app.delete('/cities', async (req, res) => {
+    try {
+      await Weather.deleteMany({}); // Esto borra todos los documentos en la colección
+      res.json({ message: 'Todas las ciudades eliminadas' });
+    } catch (error) {
+      res.status(500).json({ message: 'Error eliminando las ciudades', error });
+    }
+  });
+  

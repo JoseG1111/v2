@@ -103,3 +103,7 @@ const weatherApp = new WeatherApp(weatherService, weatherUI);
 weatherApp.init();
 
 //comentario para testear git hub
+
+
+
+//metodo para eliminar todas las ciudades
