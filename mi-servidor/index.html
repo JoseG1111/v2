@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimaPP JGBC</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Nombre de la ciudad" spellcheck="false" id="cityInput">
+            <button id="searchButton"><img src="VC/search.png"></button>
+        </div>
+
+        <div class="error" style="display: none;" id="errorMessage">
+            <p>Ciudad no encontrada</p>
+        </div>
+
+        <div class="clima" style="display: none;" id="weatherInfo">
+            <img src="/VC/clouds.png" class="iconoClima" id="weatherIcon">
+            <h1 class="temp" id="temperature">20°C</h1>
+            <h2 class="ciudad" id="cityName">Montería</h2>
+
+            <div class="detalles">
+                <div class="col">
+                    <img src="/VC/humidity.png">
+                    <div>
+                        <p class="humedad" id="humidity">30%</p>
+                        <p>Humedad</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="/VC/wind.png">
+                    <div>
+                        <p class="viento" id="windSpeed">12 km/h</p>
+                        <p>Velocidad del viento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
