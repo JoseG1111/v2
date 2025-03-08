@@ -171,8 +171,7 @@ app.listen(port, () => {
 });
 
 
-// Eliminar todas las ciudades (por _id)
-// DELETE - Eliminar todas las ciudades
+// [CAMBIO PRINCIPAL] Endpoint para eliminar todas las ciudades
 app.delete('/cities', async (req, res) => {
     try {
       await Weather.deleteMany({}); // Esto borra todos los documentos en la colección
